@@ -1,24 +1,42 @@
 <?php
-    // LAB 02
-    // WORKING ON CONDITIONAL STATEMENT WITH USING
-    // IF ELSE, else if and logical operators
+/* Student Result Calculation Script
+   Features: Total calculation, percentage, and grading logic.
+*/
 
-    echo "<h1>Conditional Statement With the use of Logical Operators</h1>";
-    echo "<br>";
+// 1. Subject Marks Define Karein
+$math       = 85;
+$english    = 78;
+$science    = 92;
+$history    = 88;
+$computer   = 94;
 
-    $solar = false;
-    $childAge = 15;
+// 2. Calculation
+$totalMarks     = 500;
+$obtainedMarks  = $math + $english + $science + $history + $computer;
+$percentage     = ($obtainedMarks / $totalMarks) * 100;
 
-    if ($childAge > 18 && $solar == true) {
-        echo "<h3>You can go with your friend!</h3>";
-    } 
-    else if ($childAge >= 15 && $solar == false) {
-        echo "<h3>You should have to go to sleep!</h3>";
-    } 
-    else if ($childAge <= 15 || $solar == false) {
-        echo "<h3>You can go with your parents!</h3>";
-    } 
-    else {
-        echo "<h3>You should have to stay at home!</h3>";
-    }
+// 3. Output Display
+echo "<h3>--- Student Result Card ---</h3>";
+echo "Total Obtained Marks: " . $obtainedMarks . " / " . $totalMarks . "<br>";
+echo "Final Percentage: " . $percentage . "% <br><br>";
+
+// 4. Grading Logic (If-Else)
+if ($percentage >= 80 && $percentage <= 100) {
+    $grade = "A+";
+} elseif ($percentage >= 70) {
+    $grade = "A";
+} elseif ($percentage >= 60) {
+    $grade = "B";
+} elseif ($percentage >= 50) {
+    $grade = "C";
+} elseif ($percentage >= 40) {
+    $grade = "D";
+} elseif ($percentage < 40 && $percentage >= 0) {
+    $grade = "Fail";
+} else {
+    $grade = "Invalid Entry";
+}
+
+echo "<strong>Your Final Grade is: " . $grade . "</strong>";
+
 ?>

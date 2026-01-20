@@ -1,36 +1,24 @@
 <?php
-echo "<h1> Conditional Statement </h1>";
+    // LAB 02
+    // WORKING ON CONDITIONAL STATEMENT WITH USING
+    // IF ELSE, else if and logical operators
 
-// Conditional Statements
-// == Equal
-// < Less than
-// > More than
-// <= Less than or equal to
-// >= More than or equal to
-// != Not equal to
-// === Comparison between two numbers
+    echo "<h1>Conditional Statement With the use of Logical Operators</h1>";
+    echo "<br>";
 
-// Conditional Statement
+    $solar = false;
+    $childAge = 15;
 
-$average = 18;
-$state = true;
-$isFeed = false;
-
-if ($average >= 18) {
-    echo "<h3> You can Drive a Car! </h3>";
-    
-    if ($state == true) {
-        echo "<h5> You can Take My Car! </h5>";
-        
-        if ($isFeed == true) {
-            echo "<h6> You got the Discount </h6>";
-        } else {
-            // Agar isFeed false hai toh kuch nahi dikhayega ya aap else add kar sakte hain
-        }
-    } else {
-        echo "<h5> You can not get the discount </h5>";
+    if ($childAge > 18 && $solar == true) {
+        echo "<h3>You can go with your friend!</h3>";
+    } 
+    else if ($childAge >= 15 && $solar == false) {
+        echo "<h3>You should have to go to sleep!</h3>";
+    } 
+    else if ($childAge <= 15 || $solar == false) {
+        echo "<h3>You can go with your parents!</h3>";
+    } 
+    else {
+        echo "<h3>You should have to stay at home!</h3>";
     }
-} else {
-    echo "<h1> You can't Drive a Car! </h1>";
-}
 ?>
